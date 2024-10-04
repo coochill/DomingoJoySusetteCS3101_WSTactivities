@@ -1,0 +1,143 @@
+:root {
+    --color-light-pink: #ffbad2;
+    --color-pink: #ff99c8;
+    --color-dark-pink: #ff70a6;
+    --color-light-orange: #ffb347;
+    --color-orange: #ff7f50;
+    --color-dark-orange: #ff4500;
+    --color-white: #f7e6e0; /* White for the main box */
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-pink);
+}
+
+header {
+    background-color: var(--color-dark-pink);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 2em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust as needed for header/footer */
+}
+
+.vision-board-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+h2 {
+    color: var(--color-orange);
+    margin-bottom: 20px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.picture-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.picture-grid img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.goals-container {
+    margin-top: 20px; 
+    width: 200px;
+    height: 50px; 
+    background-color: var(--color-white); 
+    border: 1px solid --color-light-orange; 
+    overflow: hidden; 
+    transition: height 0.3s ease; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goals-container:hover {
+    height: 200px; 
+}
+
+.goals-icon {
+    font-size: 24px;
+    padding: 10px;
+}
+
+.goals-content {
+    display: none; 
+}
+
+.goals-container:hover .goals-content {
+    display: block; /* Show the list on hover */
+    padding: 20px;
+    border: 2px dashed var(--color-dark-orange);
+    border-radius: 10px;
+}
+
+.goals-content h3 {
+    color: var(--color-dark-orange);
+    margin-bottom: 10px;
+}
+
+.goals-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals-content li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+footer {
+    background-color: var(--color-dark-pink);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.daily-reminder {
+  background-color: var(--color-orange);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-box {
+  background-color: #f08080;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
