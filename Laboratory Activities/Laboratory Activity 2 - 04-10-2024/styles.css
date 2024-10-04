@@ -11,7 +11,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-light-pink);
+    background: linear-gradient(to right, var(--color-dark-pink), var(--color-pink), var(--color-white), var(--color-dark-orange), var(--color-light-orange));
 }
 
 header {
@@ -35,7 +35,7 @@ main {
     border-radius: 10px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 75px;
+    margin: 10px 0 70px 0;
 }
 
 h2 {
@@ -71,7 +71,7 @@ h2 {
 }
 
 .goals-container {
-    margin-top: 20px; 
+    margin: 20px 0 0 20px; 
     width: 200px;
     height: 50px; 
     background-color: var(--color-white); 
@@ -84,7 +84,7 @@ h2 {
 }
 
 .goals-container:hover {
-    height: 200px; 
+    height: 250px; 
 }
 
 .goals-icon {
