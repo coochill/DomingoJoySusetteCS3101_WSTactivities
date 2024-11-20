@@ -1,0 +1,76 @@
+:root {
+    --text: #c4aebd;
+    --larger_text: #f7e7f2;
+}
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-image: url('assets/background.png');
+    background-size: cover; 
+    background-position: center; 
+    color: var(--larger_text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #d35a924d; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:#4104188f; 
+    width: 90%;
+    max-width: 600px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+textarea {
+    width: calc(100% - 20px); /* Ensures padding is considered */
+    max-width: 100%; /* Prevent overflow */
+    height: 150px;
+    padding: 10px;
+    margin: 0 auto 20px; /* Centers the text area vertically in its parent */
+    font-size: 16px;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    display: block; /* Ensures proper block behavior */
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 120px;
+    background-color: #634f594f;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box span {
+    color: #f7e7f2;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text);
+}
