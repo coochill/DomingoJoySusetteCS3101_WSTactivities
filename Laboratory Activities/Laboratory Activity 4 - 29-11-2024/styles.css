@@ -1,81 +1,118 @@
+:root {
+    --orange: rgb(231, 170, 0); 
+    --white:  rgb(201, 208, 231);
+}
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items to the top to prevent cutting off */
-    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     background: url(assets/background.gif);
     background-size: cover;
 }
+.icons {
+    font-size: 30px;
+    color: var(--orange);
+}
+
+.title {
+    margin: 20px 0;
+    font-size: 50px;
+    color: var(--orange);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
 .container {
-    display: grid; /* Using grid to create a 3x3 layout */
-    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
-    grid-gap: 15px; /* Space between boxes (adjusted) */
-    padding: 15px; /* Padding adjusted */
-    max-width: 1000px; /* Limit the max width of the container */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-gap: 15px;
+    padding: 15px;
+    max-width: 1200px;
     width: 100%;
+    grid-template-rows: auto;
 }
 
 .info-box {
-    background-color: rgba(205, 227, 255, 0.5); /* Semi-transparent background */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    display: flex; 
-    flex-direction: column; 
+    background-color: #24263671; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    box-sizing: border-box;
-    min-height: 150px;
-    position: relative; /* Position relative to handle the image */
-    overflow: hidden; /* Ensure no content overflows */
-    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background behind the box */
-    border-top: 10px solid white; /* Top border */
-    border-left: 10px solid white; /* Left border */
-    border-right: 10px solid white; /* Right border */
-    border-bottom: 20px solid white; /* Larger bottom border for the Polaroid effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for a 3D Polaroid effect */
+    min-height: 120px;
+    backdrop-filter: blur(8px);
+    border: 10px solid var(--white);
+    border-bottom: 30px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-grow: 1; /* Make the boxes grow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
 }
-
-.info-box i {
-    font-size: 30px; 
-    margin-bottom: 8px;
+.info-box h2{
+    font-size: 20px;
+    color: var(--orange);
 }
-
-.info-box h2 {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 3px;
-    padding-bottom: 8px;
-}
-
 .info-box p {
-    margin: 3px 0;
+    color: var(--orange);
     font-size: 15px;
-    word-wrap: break-word;
-    text-align: center;
+    margin: 10px 0;
 }
-
-
+li {
+    display: flex;
+    justify-content: center;
+    color: var(--orange);
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+.medium-box {
+    width: 500px;
+}
 .info-box:hover {
     transform: perspective(1000px) rotateX(10deg) rotateY(10deg); /* 3D tilt effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;   
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border: 10px solid rgba(12, 50, 88, 0.7); 
-    background-color: rgba(205, 227, 255, 0.7); 
+    border: 10px solid rgba(2, 22, 43, 0.7); 
+    background-color: rgba(50, 93, 161, 0.39); 
 }
 
-
-
+/* Large box will span 3 columns */
+.large-box {
+    grid-column: span 3;
+    text-align: left;
+    padding: 15px; 
+    font-size: 1rem; 
+    line-height: 1.4; 
+    grid-row: span 2; 
+}
 
 @media (max-width: 900px) {
     .container {
         grid-template-columns: repeat(2, 1fr); 
     }
+
+    .large-box {
+        grid-column: span 2;
+    }
 }
 
 @media (max-width: 600px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+    }
+
+    .large-box {
+        grid-column: span 1;
     }
 }
